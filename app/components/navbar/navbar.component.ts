@@ -1,12 +1,12 @@
 import {Component, View} from 'angular2/core';
 
 @Component({
-  selector: 'nav-bar',
+  selector: 'jdhm-nav-bar',
 })
 @View({
-    templateUrl: './app/components/navbar/navbar.component.html',
-})
+  templateUrl: './app/components/navbar/navbar.component.html',
 
+})
 export class NavbarComponent {
 
 }
