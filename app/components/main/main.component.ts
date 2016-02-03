@@ -14,7 +14,7 @@ import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
     directives: [NavbarComponent, SidebarComponent, ROUTER_DIRECTIVES],
 })
 @RouteConfig([
-    {path:'/crisis-center', name: 'ClientComponent', component: ClientComponent},
+    {path:'/clients', name: 'ClientComponent', component: ClientComponent},
 ])
 export class MainComponent {
   constructor() {
