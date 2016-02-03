@@ -11,9 +11,4 @@ import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 })
 
 export class SidebarComponent {
-
-    clientClicked(event) {
-        console.log("You clicked on client!");
-    }
-
 }
