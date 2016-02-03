@@ -5,7 +5,7 @@ import {Component, View} from 'angular2/core';
 })
 @View({
   templateUrl: './app/components/sidebar/sidebar.component.html',
-  styleUrls: ['./app/components/dashboard/dashboard.component.css'],
+  styleUrls: ['./app/components/main/main.component.css'],
 
 })
 export class SidebarComponent {

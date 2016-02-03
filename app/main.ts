@@ -1,4 +1,4 @@
 import {bootstrap}    from 'angular2/platform/browser'
-import {DashboardComponent} from './components/dashboard/dashboard.component'
+import {MainComponent} from './components/main/main.component'
 
-bootstrap(DashboardComponent);
+bootstrap(MainComponent);
