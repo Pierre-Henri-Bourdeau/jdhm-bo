@@ -4,7 +4,7 @@
   "description": "JDHM backoffice",
   "repository" : {
       "type" : "git",
-      "url" : "https://github.com/npm/npm.git"
+      "url" : "https://github.com/Pierre-Henri-Bourdeau/jdhm-bo.git"
   },
   "scripts": {
     "tsc": "tsc",
@@ -15,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "angular2": "2.0.0-beta.2",
+    "jquery": "2.2.0",
     "bootstrap": "^3.3.6",
     "systemjs": "0.19.6",
     "es6-promise": "^3.0.2",
