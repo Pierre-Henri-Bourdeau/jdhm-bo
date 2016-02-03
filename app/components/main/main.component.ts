@@ -3,15 +3,19 @@ import {NavbarComponent} from '../navbar/navbar.component';
 import {SidebarComponent} from '../sidebar/sidebar.component';
 import {ClientComponent} from '../client/client.component';
 
+import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
+
 @Component({
   selector: 'my-app',
 })
 @View({
     templateUrl: './app/components/main/main.component.html',
     styleUrls: ['./app/components/main/main.component.css'],
-    directives: [NavbarComponent, SidebarComponent],
+    directives: [NavbarComponent, SidebarComponent, ROUTER_DIRECTIVES],
 })
-
+@RouteConfig([
+    {path:'/crisis-center', name: 'ClientComponent', component: ClientComponent},
+])
 export class MainComponent {
   constructor() {
   }
