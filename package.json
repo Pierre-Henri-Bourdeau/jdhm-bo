@@ -9,8 +9,9 @@
   "scripts": {
     "tsc": "tsc",
     "tsc:w": "tsc -w",
-    "lite": "lite-server",
-    "start": "concurrent \"npm run tsc:w\" \"npm run lite\" "
+    "lite": "lite-server  --open=app/",
+    "start": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
+    "test": "lite-server --open=app/unit-tests.html --port=9090 --browser=google chrome"
   },
   "license": "ISC",
   "dependencies": {
@@ -27,6 +28,10 @@
   "devDependencies": {
     "concurrently": "^1.0.0",
     "jasmine-core": "2.4.1",
+    "karma": "^0.13.19",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.7",
+    "karma-requirejs": "^0.2.4",
     "lite-server": "^1.3.4",
     "typescript": "^1.7.5"
   }
