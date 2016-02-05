@@ -1,21 +1,30 @@
 import {Injectable} from 'angular2/core';
-import { Http, Headers, HTTP_PROVIDERS } from 'angular2/http'
-import 'rxjs/add/operator/map';
+import {Http, Headers, HTTP_PROVIDERS} from 'angular2/http'
+import {Client} from '../../models/client.model';
 
 @Injectable()
 
 export class ApiService {
 
-  public people: string[];
+  private http: Http;
+  public clients;
 
   constructor(http: Http) {
-      http.get('http://jdhm-api/app_dev.php/clients')
-          .map(res => res.json())
-          .subscribe(people => this.people = people);
+      this.http = http;
   }
 
   getClients() {
-      return this.people;
+
+      this.http.get('http://localhost/app_dev.php/clients')
+          .subscribe(
+              // Problem here
+              response => this.clients = response.json,
+              err => console.log(err),
+              () => console.log('Get Clients Complete')
+          );
+      console.log(this.clients);
+
+      return this.clients;
   }
 
 }
