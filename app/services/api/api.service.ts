@@ -7,7 +7,7 @@ import {Client} from '../../models/client.model';
 export class ApiService {
 
   private http: Http;
-  public clients;
+  public clients: string;
 
   constructor(http: Http) {
       this.http = http;
@@ -15,15 +15,12 @@ export class ApiService {
 
   getClients() {
 
-      this.http.get('http://jdhm-api/app_dev.php/clients')
+      this.http.get('http://jdhm/app_dev.php/clients')
           .subscribe(
-              // Problem here
-              response => this.clients = response.json,
+              response => this.clients = response.json(),
               err => console.log(err),
               () => console.log('Get Clients Complete')
           );
-
-      return this.clients;
   }
 
 }
