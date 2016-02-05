@@ -1,6 +1,8 @@
 JDHM-BO
 ========
 
+[![Join the chat at https://gitter.im/bourdeau/jdhm-bo](https://badges.gitter.im/bourdeau/jdhm-bo.svg)](https://gitter.im/bourdeau/jdhm-bo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Jdhm-bo is a client web app written with Angular2
 
 [![Dependency Status](https://www.versioneye.com/user/projects/56b22743ad0be5003e0ae167/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56b22743ad0be5003e0ae167)
