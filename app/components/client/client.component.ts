@@ -25,6 +25,6 @@ export class ClientComponent implements OnInit {
     getClients() {
         this._clientService.getClients().then(clients => this.clients = clients);
         // Test
-        this._apiService.getClients();
+        this._clientService.getApiClients().then(clients => this.clients = clients);
     }
 }

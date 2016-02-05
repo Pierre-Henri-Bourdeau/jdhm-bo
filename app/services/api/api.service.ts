@@ -22,7 +22,6 @@ export class ApiService {
               err => console.log(err),
               () => console.log('Get Clients Complete')
           );
-      console.log(this.clients);
 
       return this.clients;
   }

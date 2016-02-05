@@ -11,6 +11,8 @@ Jdhm-bo is a client web app written with Angular2
 
 [![Issue Count](https://codeclimate.com/github/bourdeau/jdhm-bo/badges/issue_count.svg)](https://codeclimate.com/github/bourdeau/jdhm-bo)
 
+[![Gitter](https://badges.gitter.im/bourdeau/jdhm-bo.svg)](https://gitter.im/bourdeau/jdhm-bo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 
 Installation
 
