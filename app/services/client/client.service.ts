@@ -9,10 +9,17 @@ export class ClientService {
     constructor(private _apiService: ApiService) {
     }
 
-    getClients() {
+    /*
+    * Get Clients from Mock
+    */
+    getClientsFromMock() {
         return Promise.resolve(CLIENTS);
     }
-    getApiClients() {
+
+    /*
+    * Get Clients from API
+    */
+    getClientsFromApi() {
         return Promise.resolve(this._apiService.getClients());
     }
 }

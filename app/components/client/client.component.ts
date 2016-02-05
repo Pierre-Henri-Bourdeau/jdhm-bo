@@ -15,7 +15,7 @@ export class ClientComponent implements OnInit {
 
     public clients: Client[];
 
-    constructor(private _clientService: ClientService, private _apiService: ApiService) {
+    constructor(private _clientService: ClientService) {
     }
 
     ngOnInit() {
@@ -23,8 +23,8 @@ export class ClientComponent implements OnInit {
     }
 
     getClients() {
-        this._clientService.getClients().then(clients => this.clients = clients);
-        // Test
-        this._clientService.getApiClients().then(clients => this.clients = clients);
+        //this._clientService.getClientsFromMock().then(clients => this.clients = clients);
+        // Fail
+        this._clientService.getClientsFromApi().then(clients => this.clients = clients);
     }
 }

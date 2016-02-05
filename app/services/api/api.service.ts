@@ -15,7 +15,7 @@ export class ApiService {
 
   getClients() {
 
-      this.http.get('http://localhost/app_dev.php/clients')
+      this.http.get('http://jdhm-api/app_dev.php/clients')
           .subscribe(
               // Problem here
               response => this.clients = response.json,
