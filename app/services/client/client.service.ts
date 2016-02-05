@@ -22,4 +22,5 @@ export class ClientService {
     getClientsFromApi() {
         return Promise.resolve(this._apiService.getClients());
     }
+
 }

@@ -7,20 +7,21 @@ import {Client} from '../../models/client.model';
 export class ApiService {
 
   private http: Http;
-  public clients: string;
+  public clients: Client[];
 
   constructor(http: Http) {
       this.http = http;
   }
 
   getClients() {
-
+      // Read this: https://coryrylan.com/blog/angular-2-observable-data-services
       this.http.get('http://jdhm/app_dev.php/clients')
           .subscribe(
-              response => this.clients = response.json(),
+              response => this.clients = response.json() ,
               err => console.log(err),
               () => console.log('Get Clients Complete')
           );
   }
+
 
 }
