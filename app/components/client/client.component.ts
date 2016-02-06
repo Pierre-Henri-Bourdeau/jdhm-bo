@@ -32,7 +32,7 @@ export class ClientComponent implements OnInit {
 
     fuckOff() {
 
-        this.http.get('http://jdhm/app_dev.php/clients')
+        this.http.get('http://jdhm-api/app_dev.php/clients')
             .subscribe(
                 response => this.clients = response.json(),
                 err => console.log(err),
