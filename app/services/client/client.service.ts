@@ -10,17 +10,10 @@ export class ClientService {
     }
 
     /*
-    * Get Clients from Mock
-    */
-    getClientsFromMock() {
-        return Promise.resolve(CLIENTS);
-    }
-
-    /*
     * Get Clients from API
     */
     getClientsFromApi() {
-        return Promise.resolve(this._apiService.getClients());
+        return this._apiService.getClients();
     }
 
 }

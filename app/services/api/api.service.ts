@@ -1,27 +1,24 @@
 import {Injectable} from 'angular2/core';
 import {Http, Headers, HTTP_PROVIDERS} from 'angular2/http'
-import {Client} from '../../models/client.model';
 
 @Injectable()
 
 export class ApiService {
 
   private http: Http;
-  public clients: Client[];
+  private baseURL: string;
 
   constructor(http: Http) {
       this.http = http;
+      this.baseURL = 'http://jdhm-api/app_dev.php';
+  }
+
+  callAPI(url:string): any {
+      return this.http.get(this.baseURL + url);
   }
 
   getClients() {
-      // Read this: https://coryrylan.com/blog/angular-2-observable-data-services
-      this.http.get('http://jdhm/app_dev.php/clients')
-          .subscribe(
-              response => this.clients = response.json() ,
-              err => console.log(err),
-              () => console.log('Get Clients Complete')
-          );
+      return this.callAPI('/clients');
   }
-
 
 }
