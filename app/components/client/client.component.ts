@@ -30,7 +30,7 @@ export class ClientComponent implements OnInit {
     * Try to use Promise instead
     */
     getClients() {
-        this.clientService.getClientsFromApi()
+        this.clientService.getClients()
             .subscribe(
                 response => this.clients = response.json() ,
                 err => console.log(err),

@@ -1,6 +1,8 @@
-import {CLIENTS} from './mock-clients';
 import {Injectable} from 'angular2/core';
 import {ApiService} from '../../services/api/api.service';
+import {Client} from '../../interfaces/client.interface';
+
+
 
 @Injectable()
 
@@ -12,8 +14,12 @@ export class ClientService {
     /*
     * Get Clients from API
     */
-    getClientsFromApi() {
+    getClients() {
         return this.apiService.getClients();
+    }
+
+    updateClient(client: Client) {
+        return this.apiService.updateClient(client);
     }
 
 }
