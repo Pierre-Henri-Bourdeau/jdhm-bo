@@ -17,27 +17,29 @@ export class ClientComponent implements OnInit {
 
     public clients: Client[];
     public selectedClient: Client;
+    public errorMessage: string;
 
-    constructor(private clientService: ClientService, private editClientComponent: EditClientComponent) {
-    }
+    constructor(private clientService: ClientService, private editClientComponent: EditClientComponent) {}
 
     ngOnInit() {
         this.getClients();
     }
 
     /*
-    * Please read https://angular.io/docs/ts/latest/guide/server-communication.html#!#sts=Subscribe%20in%20the%20HeroListComponent
-    * Try to use Promise instead
+    * Set the client list
     */
-    getClients() {
+    public getClients(): void {
         this.clientService.getClients()
             .subscribe(
-                response => this.clients = response.json() ,
-                err => console.log(err),
-                () => console.log('Get Clients Complete'));
+                clients => this.clients = clients,
+                error =>  this.errorMessage = <any>error
+            );
     }
 
-    editClient(client: Client) {
+    /*
+    * Set the selectedClient for edition
+    */
+    public editClient(client: Client): void {
         this.selectedClient = client;
     }
 

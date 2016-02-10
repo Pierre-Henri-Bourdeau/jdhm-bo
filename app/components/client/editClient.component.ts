@@ -17,13 +17,13 @@ export class EditClientComponent {
     }
 
     public client: Client;
-    public error: string;
+    public errorMessage: string;
 
     updateClient(client: Client) {
         this.clientService.updateClient(client)
             .subscribe(
                 client => client,
-                error =>  this.error = error.json().error
+                error =>  this.errorMessage = <any>error
             );
     }
 
