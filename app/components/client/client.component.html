@@ -4,6 +4,7 @@
     <table class="table table-striped">
         <thead>
             <tr>
+                <th>Action</th>
                 <th>#ID</th>
                 <th>Contract ID</th>
                 <th>Last Name</th>
@@ -13,6 +14,7 @@
         </thead>
         <tbody>
             <tr *ngFor="#client of clients">
+                <td><span (click)="editClient(client)" class="glyphicon glyphicon-pencil" aria-hidden="true" data-toggle="modal" data-target="#myModal"></span></td>
                 <td>{{client.id}}</td>
                 <td>{{client.contractId}}</td>
                 <td>{{client.firstName}}</td>
@@ -21,4 +23,5 @@
             </tr>
         </tbody>
     </table>
+    <jdmh-edit-client [client]="selectedClient"></jdmh-edit-client>
 </div>
