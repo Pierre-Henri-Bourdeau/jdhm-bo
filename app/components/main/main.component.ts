@@ -18,6 +18,4 @@ import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
     {path:'/clients', name: 'ClientComponent', component: ClientComponent},
 ])
 export class MainComponent {
-  constructor() {
-  }
 }

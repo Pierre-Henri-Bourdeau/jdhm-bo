@@ -3,14 +3,14 @@ import {OnInit} from 'angular2/core';
 import {ClientService} from '../../services/client/client.service';
 import {Client} from '../../interfaces/client.interface';
 import {ApiService} from '../../services/api/api.service';
-import {EditClient} from './editClient.component';
+import {EditClientComponent} from './editClient.component';
 
 @Component({
-    providers: [ClientService, ApiService, EditClient]
+    providers: [ClientService, ApiService, EditClientComponent]
 })
 @View({
     templateUrl: './app/components/client/client.component.html',
-    directives: [EditClient]
+    directives: [EditClientComponent]
 })
 
 export class ClientComponent implements OnInit {
@@ -18,7 +18,7 @@ export class ClientComponent implements OnInit {
     public clients: Client[];
     public selectedClient: Client;
 
-    constructor(private _clientService: ClientService, private _editClient: EditClient) {
+    constructor(private clientService: ClientService, private editClientComponent: EditClientComponent) {
     }
 
     ngOnInit() {
@@ -30,7 +30,7 @@ export class ClientComponent implements OnInit {
     * Try to use Promise instead
     */
     getClients() {
-        this._clientService.getClientsFromApi()
+        this.clientService.getClientsFromApi()
             .subscribe(
                 response => this.clients = response.json() ,
                 err => console.log(err),

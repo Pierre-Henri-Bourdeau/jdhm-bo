@@ -6,14 +6,14 @@ import {ApiService} from '../../services/api/api.service';
 
 export class ClientService {
 
-    constructor(private _apiService: ApiService) {
+    constructor(private apiService: ApiService) {
     }
 
     /*
     * Get Clients from API
     */
     getClientsFromApi() {
-        return this._apiService.getClients();
+        return this.apiService.getClients();
     }
 
 }

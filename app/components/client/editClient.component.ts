@@ -9,7 +9,7 @@ import {Client} from '../../interfaces/client.interface';
     templateUrl: './app/components/client/editClient.component.html',
 })
 
-export class EditClient {
+export class EditClientComponent {
 
     public client: Client;
 }
