@@ -3,5 +3,6 @@
   "files": ["./app/**/*.{html,htm,css,js}"],
   "server": {
       "baseDir": ["app", "."]
-  }
+  },
+  "browser": "chromium-browser"
 }
