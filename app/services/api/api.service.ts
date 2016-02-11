@@ -19,7 +19,7 @@ export class ApiService {
     */
     public get(url: string): any {
         return this.http.get(this.baseURL + url)
-                   .map(res => res.json())
+                   .map(res => res.json().data)
                    .catch(this.handleError);
     }
 
