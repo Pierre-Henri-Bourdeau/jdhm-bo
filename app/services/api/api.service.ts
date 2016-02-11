@@ -63,7 +63,12 @@ export class ApiService {
     * Error handling for the API
     */
     private handleError(error: Response) {
-        return Observable.throw(error.json().error || 'Server error');
+        var code = error.json().error.code;
+        var serverMessage = error.json().error.message;
+        var exceptionMessage = error.json().error.exception[0].message;
+        var responseMessage = 'Error ('+code+'): '+serverMessage+' ('+exceptionMessage+')';
+
+        return Observable.throw(responseMessage);
     }
 
 }
