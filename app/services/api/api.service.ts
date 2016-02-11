@@ -45,10 +45,13 @@ export class ApiService {
     public put(url: string, data): any {
 
         // See @todo on top in import section
+        var hearders = new Headers();
+        hearders.append('Content-Type', 'application/json');
+
         var options = new RequestOptions({
             method: RequestMethod.Put,
-            body: JSON.stringify(data),
-            url: this.baseURL + url
+            headers: hearders,
+            body: JSON.stringify(data)
         });
 
         return this.http.put(this.baseURL + url, JSON.stringify(data))
