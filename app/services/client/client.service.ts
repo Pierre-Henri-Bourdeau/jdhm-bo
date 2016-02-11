@@ -12,14 +12,21 @@ export class ClientService {
     * Get Clients
     */
     public getClients(): any {
-        return this.apiService.get('/client/');
+        return this.apiService.get('/clients/');
+    }
+
+    /*
+    * Create a client
+    */
+    public createClient(client: Client): any {
+        return this.apiService.post('/clients/', client);
     }
 
     /*
     * Update a client
     */
-    public updateClient(client: Client) {
-        return this.apiService.post('/client/update', client);
+    public updateClient(client: Client): any {
+        return this.apiService.put('/clients/'+client.id, client);
     }
 
 }
