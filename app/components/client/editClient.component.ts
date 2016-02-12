@@ -1,5 +1,6 @@
 import {Component, View} from 'angular2/core';
 import {Client} from '../../interfaces/client.interface';
+import {ClientClass} from '../../class/client.class';
 import {ClientService} from '../../services/client/client.service';
 
 
@@ -25,6 +26,10 @@ export class EditClientComponent {
                 client => client,
                 error =>  this.errorMessage = <any>error
             );
+    }
+
+    createClient(client) {
+        this.clientService.createClient(client);
     }
 
 }

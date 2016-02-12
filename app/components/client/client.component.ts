@@ -5,6 +5,8 @@ import {Client} from '../../interfaces/client.interface';
 import {ApiService} from '../../services/api/api.service';
 import {EditClientComponent} from './editClient.component';
 
+import {ClientClass} from '../../class/client.class';
+
 @Component({
     providers: [ClientService, ApiService, EditClientComponent]
 })
@@ -16,7 +18,7 @@ import {EditClientComponent} from './editClient.component';
 export class ClientComponent implements OnInit {
 
     public clients: Client[];
-    public selectedClient: Client;
+    public selectedClient =  new ClientClass('Robert', 'Smith', 'foo@bar.biz', '13/05/1987');
     public errorMessage: string;
 
     constructor(private clientService: ClientService, private editClientComponent: EditClientComponent) {}
@@ -39,7 +41,7 @@ export class ClientComponent implements OnInit {
     /*
     * Set the selectedClient for edition
     */
-    public editClient(client: Client): void {
+    public editClient(client): void {
         this.selectedClient = client;
     }
 

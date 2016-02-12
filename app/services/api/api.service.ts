@@ -63,10 +63,14 @@ export class ApiService {
     * Error handling for the API
     */
     private handleError(error: Response) {
-        var code = error.json().error.code;
-        var serverMessage = error.json().error.message;
-        var exceptionMessage = error.json().error.exception[0].message;
-        var responseMessage = 'Error ('+code+'): '+serverMessage+' ('+exceptionMessage+')';
+        if (error.json().total == 0) {
+            var responseMessage = 'Unknown server error';
+        } else {
+            var code = error.json().error.code;
+            var serverMessage = error.json().error.message;
+            var exceptionMessage = error.json().error.exception[0].message;
+            var responseMessage = 'Error ('+code+'): '+serverMessage+' ('+exceptionMessage+')';
+        }
 
         return Observable.throw(responseMessage);
     }
