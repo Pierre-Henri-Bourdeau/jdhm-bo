@@ -29,6 +29,9 @@
                     </div>
             </div>
             <div class="modal-footer">
+                <div *ngIf="clientCreation">
+                    CLIENT CREATION!!
+                </div>
                 <button (click)="updateClient(client)" type="button" class="btn btn-primary">Save</button>
             </div>
         </div>

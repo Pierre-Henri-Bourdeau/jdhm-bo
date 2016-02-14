@@ -14,10 +14,10 @@ import {ClientService} from '../../services/client/client.service';
 
 export class EditClientComponent {
 
-    constructor(public clientService: ClientService) {
-    }
+    constructor(public clientService: ClientService) {}
 
     public client: Client;
+    public clientCreation: boolean = false;
     public errorMessage: string;
 
     updateClient(client: Client) {
@@ -30,6 +30,10 @@ export class EditClientComponent {
 
     createClient(client) {
         this.clientService.createClient(client);
+    }
+
+    isActiveCreateClient() {
+        this.clientCreation = true;
     }
 
 }
