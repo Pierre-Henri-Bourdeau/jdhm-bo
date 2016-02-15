@@ -3,7 +3,6 @@ import {Client} from '../../interfaces/client.interface';
 import {ClientClass} from '../../class/client.class';
 import {ClientService} from '../../services/client/client.service';
 
-
 @Component({
     selector: 'jdmh-edit-client',
     inputs: ['client']
@@ -16,24 +15,39 @@ export class EditClientComponent {
 
     constructor(public clientService: ClientService) {}
 
-    public client: Client;
-    public clientCreation: boolean = false;
+    public client = new ClientClass('', '', '', '');
+    // Just for template view
+    public isClientCreation: boolean = false;
     public errorMessage: string;
 
+    /*
+    * Update an already existing client
+    */
+    editClientAction(client: ClientClass) {
+        this.isClientCreation = false;
+        this.client = client;
+    }
+
+    /*
+    * Create a new client
+    */
+    createClientAction(): void {
+        this.isClientCreation = true;
+        this.client =  new ClientClass('', '', '', '');
+    }
+
     updateClient(client: Client) {
-        this.clientService.updateClient(client)
-            .subscribe(
-                client => client,
-                error =>  this.errorMessage = <any>error
-            );
-    }
 
-    createClient(client) {
-        this.clientService.createClient(client);
-    }
+        if (this.isClientCreation) {
+            var data = this.clientService.createClient(client);
+        } else {
+            var data = this.clientService.updateClient(client);
+        }
 
-    isActiveCreateClient() {
-        this.clientCreation = true;
+        data.subscribe(
+            client => client,
+            error =>  this.errorMessage = <any>error
+        );
     }
 
 }

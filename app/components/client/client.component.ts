@@ -18,7 +18,6 @@ import {ClientClass} from '../../class/client.class';
 export class ClientComponent implements OnInit {
 
     public clients: Client[];
-    public selectedClient =  new ClientClass('Robert', 'Smith', 'foo@bar.biz', '13/05/1987');
     public errorMessage: string;
 
     constructor(private clientService: ClientService, private editClientComponent: EditClientComponent) {}
@@ -37,12 +36,4 @@ export class ClientComponent implements OnInit {
                 error =>  this.errorMessage = <any>error
             );
     }
-
-    /*
-    * Set the selectedClient for edition
-    */
-    public editClient(client): void {
-        this.selectedClient = client;
-    }
-
 }
