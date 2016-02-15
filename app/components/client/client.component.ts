@@ -40,10 +40,10 @@ export class ClientComponent implements OnInit {
     public deleteClientAction(client: Client): void {
         this.clientService.deleteClient(client)
             .subscribe(
-                clients => this.clients = clients,
+                // Update client list
+                clients => this.getClients(),
                 error =>  this.errorMessage = <any>error
             );
-            
-        this.getClients();
+
     }
 }

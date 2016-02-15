@@ -45,7 +45,7 @@ export class EditClientComponent {
         }
 
         data.subscribe(
-            client => client,
+            client => //@todo call ClientComponent.getGlients(),
             error =>  this.errorMessage = <any>error
         );
     }
