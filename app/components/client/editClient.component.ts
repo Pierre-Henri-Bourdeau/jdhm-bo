@@ -48,6 +48,7 @@ export class EditClientComponent {
             client => //@todo call ClientComponent.getGlients(),
             error =>  this.errorMessage = <any>error
         );
+
     }
 
 }
