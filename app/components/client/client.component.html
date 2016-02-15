@@ -16,7 +16,10 @@
         </thead>
         <tbody>
             <tr *ngFor="#client of clients">
-                <td><span (click)="EditClientComponent.editClientAction(client)" class="glyphicon glyphicon-pencil" aria-hidden="true" data-toggle="modal" data-target="#myModal"></span></td>
+                <td>
+                    <span (click)="EditClientComponent.editClientAction(client)" class="glyphicon glyphicon-pencil" aria-hidden="true" data-toggle="modal" data-target="#myModal"></span>
+                    <span (click)="deleteClientAction(client)" class="glyphicon glyphicon-remove-circle"></span>
+                </td>
                 <td>{{client.id}}</td>
                 <td>{{client.email}}</td>
                 <td>{{client.firstName}}</td>

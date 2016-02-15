@@ -36,4 +36,14 @@ export class ClientComponent implements OnInit {
                 error =>  this.errorMessage = <any>error
             );
     }
+
+    public deleteClientAction(client: Client): void {
+        this.clientService.deleteClient(client)
+            .subscribe(
+                clients => this.clients = clients,
+                error =>  this.errorMessage = <any>error
+            );
+            
+        this.getClients();
+    }
 }

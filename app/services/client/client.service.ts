@@ -29,4 +29,11 @@ export class ClientService {
         return this.apiService.put('/clients/'+client.id, client);
     }
 
+    /*
+    * Delete a client
+    */
+    public deleteClient(client: Client): any {
+        return this.apiService.delete('/clients/'+client.id, client);
+    }
+
 }

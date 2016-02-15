@@ -43,18 +43,16 @@ export class ApiService {
     * Put method for the API
     */
     public put(url: string, data): any {
-
-        // See @todo on top in import section
-        var hearders = new Headers();
-        hearders.append('Content-Type', 'application/json');
-
-        var options = new RequestOptions({
-            method: RequestMethod.Put,
-            headers: hearders,
-            body: JSON.stringify(data)
-        });
-
         return this.http.put(this.baseURL + url, JSON.stringify(data))
+                   .map(res => res.json())
+                   .catch(this.handleError);
+    }
+
+    /*
+    * Delete method for the API
+    */
+    public delete(url: string, data): any {
+        return this.http.delete(this.baseURL + url)
                    .map(res => res.json())
                    .catch(this.handleError);
     }
