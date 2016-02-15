@@ -8,10 +8,10 @@ import {ClientService} from '../../services/client/client.service';
     inputs: ['client']
 })
 @View({
-    templateUrl: './app/components/client/editClient.component.html',
+    templateUrl: './app/components/client/formClient.component.html',
 })
 
-export class EditClientComponent {
+export class FormClientComponent {
 
     constructor(public clientService: ClientService) {}
 

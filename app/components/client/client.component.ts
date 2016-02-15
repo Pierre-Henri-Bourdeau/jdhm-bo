@@ -3,16 +3,16 @@ import {OnInit} from 'angular2/core';
 import {ClientService} from '../../services/client/client.service';
 import {Client} from '../../interfaces/client.interface';
 import {ApiService} from '../../services/api/api.service';
-import {EditClientComponent} from './editClient.component';
+import {FormClientComponent} from './formClient.component';
 
 import {ClientClass} from '../../class/client.class';
 
 @Component({
-    providers: [ClientService, ApiService, EditClientComponent]
+    providers: [ClientService, ApiService, FormClientComponent]
 })
 @View({
     templateUrl: './app/components/client/client.component.html',
-    directives: [EditClientComponent]
+    directives: [FormClientComponent]
 })
 
 export class ClientComponent implements OnInit {
@@ -20,7 +20,7 @@ export class ClientComponent implements OnInit {
     public clients: Client[];
     public errorMessage: string;
 
-    constructor(private clientService: ClientService, private editClientComponent: EditClientComponent) {}
+    constructor(private clientService: ClientService, private formClientComponent: FormClientComponent) {}
 
     ngOnInit() {
         this.getClients();

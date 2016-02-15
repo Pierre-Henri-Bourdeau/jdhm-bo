@@ -1,6 +1,6 @@
 <h1 class="page-header">Clients</h1>
 
-<button (click)="EditClientComponent.createClientAction()" type="button" class="btn btn-primary" aria-hidden="true" data-toggle="modal" data-target="#formClientModal">Create client</button>
+<button (click)="formClientComponent.createClientAction()" type="button" class="btn btn-primary" aria-hidden="true" data-toggle="modal" data-target="#formClientModal">Create client</button>
 
 <div class="table-responsive">
     <table class="table table-striped">
@@ -17,7 +17,7 @@
         <tbody>
             <tr *ngFor="#client of clients">
                 <td>
-                    <span (click)="EditClientComponent.editClientAction(client)" class="glyphicon glyphicon-pencil" aria-hidden="true" data-toggle="modal" data-target="#formClientModal"></span>
+                    <span (click)="formClientComponent.editClientAction(client)" class="glyphicon glyphicon-pencil" aria-hidden="true" data-toggle="modal" data-target="#formClientModal"></span>
                     <span (click)="deleteClientAction(client)" class="glyphicon glyphicon-remove-circle"></span>
                 </td>
                 <td>{{client.id}}</td>
@@ -28,6 +28,6 @@
             </tr>
         </tbody>
     </table>
-    <jdmh-edit-client #EditClientComponent [client]="EditClientComponent.client"></jdmh-edit-client>
+    <jdmh-edit-client #formClientComponent [client]="formClientComponent.client"></jdmh-edit-client>
 
 </div>
