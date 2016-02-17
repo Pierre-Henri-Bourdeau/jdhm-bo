@@ -4,7 +4,7 @@
   "description": "JDHM backoffice",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Pierre-Henri-Bourdeau/jdhm-bo.git"
+    "url": "https://github.com/bourdeau/jdhm-bo.git"
   },
   "scripts": {
     "tsc": "tsc",
@@ -12,27 +12,27 @@
     "lite": "lite-server",
     "start": "concurrent \"npm run tsc:w\" \"npm run lite\" "
   },
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "angular2": "2.0.0-beta.6",
-    "jquery": "2.2.0",
-    "bootstrap": "^3.3.6",
     "systemjs": "0.19.20",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.3",
     "reflect-metadata": "0.1.2",
     "rxjs": "5.0.0-beta.0",
-    "zone.js": "0.5.14"
+    "zone.js": "0.5.14",
+    "jquery": "2.2.0",
+    "bootstrap": "^3.3.6"
   },
   "devDependencies": {
-    "concurrently": "^1.0.0",
+    "typescript": "^1.7.5",
+    "lite-server": "^2.0.1",
+    "concurrently": "^2.0.0",
     "jasmine-core": "2.4.1",
     "karma": "^0.13.19",
     "karma-firefox-launcher": "^0.1.7",
     "karma-jasmine": "^0.3.7",
     "karma-requirejs": "^0.2.4",
-    "lite-server": "^2.0.1",
-    "requirejs": "^2.1.22",
-    "typescript": "^1.7.5"
+    "requirejs": "^2.1.22"
   }
 }
