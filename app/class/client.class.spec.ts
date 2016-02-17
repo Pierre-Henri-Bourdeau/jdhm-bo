@@ -1,18 +1,19 @@
 import {ClientClass} from './client.class';
+import {describe, expect, it} from 'angular2/testing';
 
 describe('1st tests', () => {
 
     let client = new ClientClass('John', 'Smith', 'foo@bar.io');
 
     it('FirstName should be set', () => {
-        expect(client.firstName).toEqual('John')
+        expect(client.firstName).toHaveText('John')
     });
 
     it('LastName should be set', () => {
-        expect(client.lastName).toEqual('Smith')
+        expect(client.lastName).toHaveText('Smith')
     });
 
     it('Email should be set', () => {
-        expect(client.email).toEqual('foo@bar.io')
+        expect(client.email).toHaveText('foo@bar.io')
     });
 });
