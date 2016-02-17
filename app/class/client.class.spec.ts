@@ -1,5 +1,5 @@
-import {ClientClass} from './client.class';
 import {describe, expect, it} from 'angular2/testing';
+import {ClientClass} from './client.class';
 
 describe('1st tests', () => {
 
