@@ -26,3 +26,9 @@ git clone git@github.com:bourdeau/jdhm-bo.git && cd jdhm-bo && npm install && np
 ```
 npm run test
 ```
+
+## Dependencies
+
+Some dependencies are not up to date: angular2@2.0.0-beta.6 require reflect-metadata@0.1.2 and es6-shim@^0.33.3 so this two dependencies can't be updated.
+
+## Known Issues
