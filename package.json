@@ -6,6 +6,8 @@
     "type": "git",
     "url": "https://github.com/bourdeau/jdhm-bo.git"
   },
+  "author": "Pierre-Henri Bourdeau <phbasic@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "postinstall": "npm run typings install",
     "typings": "typings",
@@ -15,7 +17,6 @@
     "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "test": "karma start"
   },
-  "license": "MIT",
   "dependencies": {
     "angular2": "github:angular/angular#2.0.0-build.a7e9bc9.js",
     "bootstrap": "^3.3.6",
