@@ -8,3 +8,11 @@ before_script:
 
 script:
     - npm run test
+    - npm run coverage
+
+after_script:
+  - codeclimate-test-reporter < lcov.info
+
+addons:
+    code_climate:
+        repo_token: dd1361d61eff602294ea6b59443136e0300552d761d9f4b3d0f2fe1ad40d05cc
