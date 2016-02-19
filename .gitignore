@@ -4,3 +4,4 @@ app/**/*.js
 app/**/*.js.map
 !app/system.conf.js
 /typings
+/coverage

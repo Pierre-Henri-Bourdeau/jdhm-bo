@@ -1,0 +1,8 @@
+{
+  "port": 3678,
+  "files": ["./coverage/**/*.{html,htm,css,js}"],
+  "server": {
+      "baseDir": ["coverage"]
+  },
+  "browser": "chromium-browser"
+}
