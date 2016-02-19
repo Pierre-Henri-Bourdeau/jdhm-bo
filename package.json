@@ -10,6 +10,7 @@
   "license": "MIT",
   "scripts": {
     "postinstall": "typings install",
+    "compile": "tsc",
     "start": "concurrently \"tsc -w\" \"lite-server\" ",
     "test": "karma start",
     "posttest": "remap-istanbul -i coverage/coverage-final.json -o coverage -t html",
