@@ -13,7 +13,7 @@
     "compile": "tsc",
     "start": "concurrently \"tsc -w\" \"lite-server\" ",
     "test": "karma start",
-    "posttest": "remap-istanbul -i coverage/coverage-final.json -o coverage -t html",
+    "posttest": "remap-istanbul -i coverage/report-json/coverage-final.json -o coverage -t html",
     "coverage": "lite-server -c bs-coverage-config.json"
   },
   "dependencies": {
