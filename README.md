@@ -6,7 +6,7 @@ JDHM-BO
 [![Throughput Graph](https://graphs.waffle.io/bourdeau/jdhm-bo/throughput.svg)](https://waffle.io/bourdeau/jdhm-bo/metrics)
 
 
-## Description
+## Description :blue_book:
 
 Jdhm-bo is a web app written with Angular2 and using a REST Api named [jdhm-api](https://github.com/bourdeau/jdhm-api) (PHP/Symfony3)
 
@@ -37,10 +37,10 @@ npm run test
 npm run coverage
 ```
 
-## Dependencies
+## Dependencies :cloud:
 
 Some dependencies are not up to date: angular2@2.0.0-beta.6 require reflect-metadata@0.1.2 and es6-shim@^0.33.3 so this two dependencies can't be updated.
 
-## Known Issues
+## Known Issues :persevere:
 
 None for now... :triumph:
