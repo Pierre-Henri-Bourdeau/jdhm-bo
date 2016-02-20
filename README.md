@@ -13,17 +13,28 @@ Jdhm-bo is a web app written with Angular2 and using a REST Api named [jdhm-api]
 Angular2 is currently under development: https://splintercode.github.io/is-angular-2-ready/
 
 
-## Installing
+## Installing :sleeping:
 
 ```
-git clone git@github.com:bourdeau/jdhm-bo.git && cd jdhm-bo && npm install && npm start
+# Clone and install modules
+git clone git@github.com:bourdeau/jdhm-bo.git && cd jdhm-bo && npm install
+
+# Install typings
+npm run postinstall
+
+# Run project (launch chromium-browser, so won't start on Windows)
+npm start
 
 ```
 
-## Test
+## Tests :pray:
 
 ```
+# Run test and generate coverage
 npm run test
+
+# See coverage
+npm run coverage
 ```
 
 ## Dependencies
@@ -31,3 +42,5 @@ npm run test
 Some dependencies are not up to date: angular2@2.0.0-beta.6 require reflect-metadata@0.1.2 and es6-shim@^0.33.3 so this two dependencies can't be updated.
 
 ## Known Issues
+
+None for now... :triumph:
