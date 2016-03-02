@@ -19,15 +19,19 @@ export class FormClientComponent {
     // Just for template view
     public isClientCreation: boolean = false;
     public errorMessage: string;
+    public showModal = false;
 
     /*
     * Update an already existing client
     */
     editClientAction(client: ClientClass) {
+        this.showModal = true;
         this.isClientCreation = false;
         this.client = client;
     }
-
+    closeModal() {
+        this.showModal = false;
+    }
     /*
     * Create a new client
     */
@@ -48,6 +52,8 @@ export class FormClientComponent {
             client => //@todo call ClientComponent.getGlients(),
             error =>  this.errorMessage = <any>error
         );
+
+        this.closeModal();
 
     }
 
