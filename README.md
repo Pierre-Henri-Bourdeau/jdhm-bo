@@ -10,8 +10,6 @@ JDHM-BO
 
 Jdhm-bo is a web app written with Angular2 and using a REST Api named [jdhm-api](https://github.com/bourdeau/jdhm-api) (PHP/Symfony3)
 
-Angular2 is currently under development: https://splintercode.github.io/is-angular-2-ready/
-
 
 ## Installing :sleeping:
 
@@ -39,7 +37,7 @@ npm run coverage
 
 ## Dependencies :cloud:
 
-Some dependencies are not up to date: angular2@2.0.0-beta.6 require reflect-metadata@0.1.2 and es6-shim@^0.33.3 so this two dependencies can't be updated.
+Some dependencies are not up to date: angular2@2.0.0-beta.8 require reflect-metadata@0.1.2, es6-shim@^0.33.3 and zone.js@0.5.15 so these three dependencies can't be updated.
 
 ## Known Issues :persevere:
 
