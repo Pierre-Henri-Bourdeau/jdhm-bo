@@ -43,7 +43,7 @@
     "karma-systemjs": "^0.8.0-beta2",
     "karma-typescript-preprocessor": "0.0.21",
     "lite-server": "^2.0.1",
-    "phantomjs-polyfill": "0.0.1",
+    "phantomjs-polyfill": "0.0.2",
     "phantomjs-prebuilt": "2.1.4",
     "remap-istanbul": "^0.5.1",
     "typescript": "^1.7.5",
