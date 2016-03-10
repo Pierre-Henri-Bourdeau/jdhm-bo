@@ -29,6 +29,7 @@ export class FormClientComponent {
         this.isClientCreation = false;
         this.client = client;
     }
+
     closeModal() {
         this.showModal = false;
     }
@@ -36,6 +37,7 @@ export class FormClientComponent {
     * Create a new client
     */
     createClientAction(): void {
+        this.showModal = true;
         this.isClientCreation = true;
         this.client =  new ClientClass('', '', '', '');
     }
