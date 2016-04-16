@@ -1,4 +1,4 @@
-import {Component, View} from 'angular2/core';
+import {Component} from 'angular2/core';
 import {OnInit} from 'angular2/core';
 import {ClientService} from '../../services/client/client.service';
 import {Client} from '../../interfaces/client.interface';
@@ -8,9 +8,7 @@ import {FormClientComponent} from './formClient.component';
 import {ClientClass} from '../../class/client.class';
 
 @Component({
-    providers: [ClientService, ApiService, FormClientComponent]
-})
-@View({
+    providers: [ClientService, ApiService, FormClientComponent],
     templateUrl: './app/components/client/client.component.html',
     directives: [FormClientComponent]
 })

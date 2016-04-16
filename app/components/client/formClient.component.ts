@@ -1,14 +1,12 @@
-import {Component, View} from 'angular2/core';
+import {Component} from 'angular2/core';
 import {Client} from '../../interfaces/client.interface';
 import {ClientClass} from '../../class/client.class';
 import {ClientService} from '../../services/client/client.service';
 
 @Component({
     selector: 'jdmh-edit-client',
-    inputs: ['client']
-})
-@View({
-    templateUrl: './app/components/client/formClient.component.html',
+    inputs: ['client'],
+    templateUrl: './app/components/client/formClient.component.html'
 })
 
 export class FormClientComponent {
