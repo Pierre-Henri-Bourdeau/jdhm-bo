@@ -2,6 +2,6 @@
 npm-debug.log
 app/**/*.js
 app/**/*.js.map
-!app/system.conf.js
+!app/systemjs.config.js
 /typings
 /coverage
