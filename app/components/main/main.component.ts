@@ -1,9 +1,9 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 import {NavbarComponent} from '../navbar/navbar.component';
 import {SidebarComponent} from '../sidebar/sidebar.component';
 import {HomeComponent} from '../home/home.component';
 import {ClientComponent} from '../client/client.component';
-import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
+import {Routes, ROUTER_DIRECTIVES} from '@angular/router';
 
 @Component({
   selector: 'my-app',
@@ -11,9 +11,9 @@ import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
   styleUrls: ['./app/components/main/main.component.css'],
   directives: [NavbarComponent, SidebarComponent, ROUTER_DIRECTIVES],
 })
-@RouteConfig([
-    {path:'/', name: 'HomeComponent', component: HomeComponent},
-    {path:'/clients', name: 'ClientComponent', component: ClientComponent},
+@Routes([
+    {path:'/', component: HomeComponent},
+    {path:'/clients', component: ClientComponent},
 ])
 export class MainComponent {
 }

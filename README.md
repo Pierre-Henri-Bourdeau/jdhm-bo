@@ -13,8 +13,9 @@ Jdhm-bo is a web app written with Angular2 and using a REST Api named [jdhm-api]
 
 ## Installing :sleeping:
 
-```
+```bash
 # Clone and install modules
+sudo apt-get install chromium-browser
 git clone git@github.com:bourdeau/jdhm-bo.git && cd jdhm-bo && npm install
 
 # Install typings

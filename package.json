@@ -1,51 +1,60 @@
 {
-  "name": "JDHM-BO",
-  "version": "1.0.0",
-  "description": "JDHM backoffice",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bourdeau/jdhm-bo.git"
-  },
-  "author": "Pierre-Henri Bourdeau <phbasic@gmail.com>",
-  "license": "MIT",
-  "scripts": {
-    "postinstall": "typings install",
-    "compile": "tsc",
-    "start": "concurrently \"tsc -w\" \"lite-server\" ",
-    "test": "karma start",
-    "posttest": "remap-istanbul -i coverage/report-json/coverage-final.json -o coverage -t html",
-    "coverage": "lite-server -c bs-coverage-config.json"
-  },
-  "dependencies": {
-    "angular2": "2.0.0-beta.15",
-    "bootstrap": "^3.3.6",
-    "jquery": "2.2.1",
-    "es6-promise": "^3.0.2",
-    "es6-shim": "^0.35.0",
-    "reflect-metadata": "0.1.2",
-    "rxjs": "5.0.0-beta.2",
-    "systemjs": "0.19.26",
-    "zone.js": "0.6.11"
-  },
-  "devDependencies": {
-    "codeclimate-test-reporter": "^0.3.1",
-    "concurrently": "^2.0.0",
-    "es6-module-loader": "^0.17.3",
-    "jasmine-core": "2.4.1",
-    "karma": "^0.13.3",
-    "karma-chrome-launcher": "^0.2.0",
-    "karma-coverage": "^0.5.3",
-    "karma-firefox-launcher": "^0.1.5",
-    "karma-jasmine": "^0.3.6",
-    "karma-junit-reporter": "^0.4.2",
-    "karma-phantomjs-launcher": "1.0.0",
-    "karma-systemjs": "^0.8.0-beta2",
-    "karma-typescript-preprocessor": "0.1.2",
-    "lite-server": "^2.0.1",
-    "phantomjs-polyfill": "0.0.2",
-    "phantomjs-prebuilt": "2.1.7",
-    "remap-istanbul": "^0.6.2",
-    "typescript": "^1.7.5",
-    "typings": "^0.7.12"
-  }
+    "name": "JDHM-BO",
+    "version": "1.0.0",
+    "description": "JDHM backoffice",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bourdeau/jdhm-bo.git"
+    },
+    "author": "Pierre-Henri Bourdeau <phbasic@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "postinstall": "typings install",
+        "compile": "tsc",
+        "start": "concurrently \"tsc -w\" \"lite-server\" ",
+        "test": "karma start",
+        "posttest": "remap-istanbul -i coverage/report-json/coverage-final.json -o coverage -t html",
+        "coverage": "lite-server -c bs-coverage-config.json"
+    },
+    "dependencies": {
+        "@angular/common": "2.0.0-rc.1",
+        "@angular/compiler": "2.0.0-rc.1",
+        "@angular/core": "2.0.0-rc.1",
+        "@angular/http": "2.0.0-rc.1",
+        "@angular/platform-browser": "2.0.0-rc.1",
+        "@angular/platform-browser-dynamic": "2.0.0-rc.1",
+        "@angular/router": "2.0.0-rc.1",
+        "@angular/router-deprecated": "2.0.0-rc.1",
+        "@angular/upgrade": "2.0.0-rc.1",
+        "systemjs": "0.19.27",
+        "core-js": "^2.4.0",
+        "reflect-metadata": "^0.1.3",
+        "rxjs": "5.0.0-beta.6",
+        "zone.js": "^0.6.12",
+        "angular2-in-memory-web-api": "0.0.10",
+        "bootstrap": "^3.3.6",
+
+        "jquery": "2.2.1"
+    },
+    "devDependencies": {
+        "concurrently": "^2.0.0",
+        "lite-server": "^2.2.0",
+        "typescript": "^1.8.10",
+        "typings": "^1.0.4",
+        "codeclimate-test-reporter": "^0.3.1",
+        "es6-module-loader": "^0.17.3",
+        "jasmine-core": "2.4.1",
+        "karma": "^0.13.3",
+        "karma-chrome-launcher": "^0.2.0",
+        "karma-coverage": "^0.5.3",
+        "karma-firefox-launcher": "^0.1.5",
+        "karma-jasmine": "^0.3.6",
+        "karma-junit-reporter": "^0.4.2",
+        "karma-phantomjs-launcher": "1.0.0",
+        "karma-systemjs": "^0.8.0-beta2",
+        "karma-typescript-preprocessor": "0.1.2",
+        "phantomjs-polyfill": "0.0.2",
+        "phantomjs-prebuilt": "2.1.7",
+        "remap-istanbul": "^0.6.2"
+    }
 }

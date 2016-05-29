@@ -1,5 +1,5 @@
-import {Component} from 'angular2/core';
-import {OnInit} from 'angular2/core';
+import {Component} from '@angular/core';
+import {OnInit} from '@angular/core';
 import {ClientService} from '../../services/client/client.service';
 import {Client} from '../../interfaces/client.interface';
 import {ApiService} from '../../services/api/api.service';

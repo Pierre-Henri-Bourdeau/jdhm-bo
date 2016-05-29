@@ -1,5 +1,5 @@
-import {Injectable} from 'angular2/core';
-import {Http, Response, Headers, HTTP_PROVIDERS} from 'angular2/http'
+import {Injectable} from '@angular/core';
+import {Http, Response, Headers, HTTP_PROVIDERS} from '@angular/http'
 import {Observable} from 'rxjs/Observable';
 
 /*
@@ -7,7 +7,7 @@ import {Observable} from 'rxjs/Observable';
 * http://stackoverflow.com/questions/12111936/angularjs-performs-an-options-http-request-for-a-cross-origin-resource
 * https://angular.io/docs/js/latest/api/http/RequestOptions-class.html
 */
-import {RequestOptions, Request, RequestMethod} from 'angular2/http';
+import {RequestOptions, Request, RequestMethod} from '@angular/http';
 
 @Injectable()
 

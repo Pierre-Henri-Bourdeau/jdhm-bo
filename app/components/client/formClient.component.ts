@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 import {Client} from '../../interfaces/client.interface';
 import {ClientClass} from '../../class/client.class';
 import {ClientService} from '../../services/client/client.service';
